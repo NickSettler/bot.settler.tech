@@ -11,9 +11,6 @@ interface MainPageState {
 }
 
 class MainPage extends React.Component<MainPageProps, MainPageState> {
-    constructor(props: MainPageProps) {
-        super(props);
-    }
 
     render(): React.ReactNode {
         return (
