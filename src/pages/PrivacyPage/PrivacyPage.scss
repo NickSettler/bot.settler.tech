@@ -1,0 +1,84 @@
+.app {
+    height: auto;
+}
+
+.privacy-page {
+    width: 100%;
+    height: auto;
+    display: grid;
+    position: relative;
+
+    grid-template-rows: 48px auto;
+    grid-template-columns: 100%;
+    grid-gap: 20px;
+
+    grid-template-areas: "header" "content";
+
+    justify-content: center;
+    justify-items: center;
+}
+
+.privacy-page__header {
+    width: 100%;
+    height: auto;
+    display: grid;
+    position: sticky;
+
+    align-content: center;
+
+    top: 0;
+    border-radius: 8px;
+
+    grid-template-rows: 100%;
+    grid-template-columns: 48px 1fr 48px;
+    grid-gap: 16px;
+
+    grid-template-areas: "back space info";
+    grid-area: header;
+
+    background: #FFFFFF;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+    z-index: 2;
+}
+
+.privacy-page__back {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    position: relative;
+
+    grid-area: back;
+
+    background-size: 32px 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.privacy-page__content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    position: relative;
+
+    flex-direction: column;
+
+    grid-area: content;
+
+    margin-bottom: 32px;
+
+    h1{
+        margin: 0 0 32px;
+    }
+    h2{
+        margin: 16px 0;
+    }
+    p{
+        margin: 4px 0;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .privacy-page__content{
+        max-width: calc(414px - 40px);
+    }
+}
