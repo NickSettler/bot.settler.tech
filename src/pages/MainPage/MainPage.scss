@@ -39,11 +39,13 @@
     display: flex;
     position: relative;
 
+    justify-content: center;
     grid-area: privacy;
 
     border-radius: 8px;
     border: 2px solid #0d58f3;
     padding: 8px 48px;
+    box-sizing: border-box;
 
     font-family: -apple-system, BlinkMacSystemFont, 'Roboto Slab', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -66,7 +68,12 @@
 
 @media screen and (max-width: 414px) {
     .main-page {
+        width: calc(100% - 40px);
+
         grid-template-columns: 100%;
         grid-template-rows: repeat(3, 1fr);
+    }
+    .main-page__privacy{
+        padding: 8px 24px;
     }
 }
